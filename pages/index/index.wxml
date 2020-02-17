@@ -1,0 +1,40 @@
+<!--index.wxml-->
+
+<!-- navigationBar + input -->
+<view class='nav-wrap'>
+  <view class='nav-title'>快递查询</view>
+  <image class='nav_bg' mode='scaleToFill' src='../../images/nav_bg.png'></image>
+  <view class='input_wrap'>
+    <image class='input_border' src='../../images/input_border.png'></image>
+    <input class='ticket_id' name="ticket_id" placeholder='请输入快递单号' placeholder-class='pClass' value='{{ticket_id}}' bindconfirm ="enter"></input>
+    <view class='scan' catchtap='scan'></view>
+  </view>
+</view>
+
+<!-- No enquiry record -->
+<view class='history' wx:if="{{!array.length}}">
+  <view class='tips'>
+    <image class='tips' src='../../images/tips.png'></image>
+  </view>
+  <image class='bg_null' mode='scaleToFill' src='../../images/bg_null.png'></image>
+</view>
+
+<!-- enquiry record -->
+<view class='history' wx:else>
+  <view class='his_tag'>历史记录</view>
+  <block wx:for="{{array}}" wx:key="{{index}}">
+    <view class='record' catchtap='tracking'>
+      <view class='record_msg'>
+        <image class='sign' src='../../images/sign.png'></image>
+        <text class='belong'>{{item.ShipperCode}} {{item.LogistcCode}}</text>
+        <text class='time'>{{item.AcceptTime}}</text>
+        <!-- <text class='date'>{{item.AcceptTime.date}}</text> -->
+      </view>
+      <view class='record_info'>
+        <view class='note' wx:if="{{item.note}}" >{{item.note}}</view>
+        <label class='status'>{{item.state}}</label>
+        <text class='txt'>{{item.AcceptStation}}</text>
+      </view>
+    </view>
+  </block>
+</view>

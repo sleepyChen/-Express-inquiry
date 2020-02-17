@@ -1,0 +1,160 @@
+<!--pages/tracking/index.wxml-->
+<view class='contain {{over_hid}}'>
+  <!-- navigationBar -->
+  <view class='nav-wrap'>
+    <view class='nav-title'>
+      <label class='back' catchtap='back'></label>
+      <text>物流追踪</text>
+    </view>
+    <image class='nav_bg' mode='scaleToFill' src='../../images/nav_bg.png'></image>
+  </view>
+
+  <!-- tracking -->
+  <view class='content'>
+    <view class='con_wrap'>
+      <view class='label_belong'>
+        <image class='sign' src='../../images/sign.png'></image>
+        <text class='belong'>京东物流  {{note}} </text>
+        <text class='track_num'>12345678911</text>
+      </view>
+      <view class='msg'>
+        <view class='thread' style='height:{{threadHeight}}'></view>
+        <view class='msg_ul'>
+          <view class='msg_li'>
+            <text class='terminate'>货物已到达【韶关站】</text>
+            <view class='box'>
+              <text class='date'>2018-11-09</text>
+              <text class='time'>10:52:54</text>
+            </view>
+          </view>
+        </view>
+        <view class='msg_ul'>
+          <view class='msg_li'>
+            <text class='txt'>货物已分配，等待配送</text>
+            <view class='box'>
+              <text class='date'>2018-11-09</text>
+              <text class='time'>10:52:54</text>
+            </view>
+          </view>
+          <view class='msg_li'>
+            <text class='txt'>货物已分配，等待配送</text>
+            <view class='box'>
+              <text class='date'>2018-11-09</text>
+              <text class='time'>10:52:54</text>
+            </view>
+          </view>
+          <view class='msg_li'>
+            <text class='txt'>货物已分配，等待配送</text>
+            <view class='box'>
+              <text class='date'>2018-11-09</text>
+              <text class='time'>10:52:54</text>
+            </view>
+          </view>
+        </view>
+        <view class='msg_ul'>
+          <view class='msg_li'>
+            <text class='txt'>货物已分配，等待配送</text>
+            <view class='box'>
+              <text class='date'>2018-11-09</text>
+              <text class='time'>10:52:54</text>
+            </view>
+          </view>
+          <view class='msg_li'>
+            <text class='txt'>货物已分配，等待配送</text>
+            <view class='box'>
+              <text class='date'>2018-11-09</text>
+              <text class='time'>10:52:54</text>
+            </view>
+          </view>
+          <view class='msg_li'>
+            <text class='txt'>货物已分配，等待配送</text>
+            <view class='box'>
+              <text class='date'>2018-11-09</text>
+              <text class='time'>10:52:54</text>
+            </view>
+          </view>
+        </view>
+        <view class='msg_ul'>
+          <view class='msg_li'>
+            <text class='txt'>货物已分配，等待配送</text>
+            <view class='box'>
+              <text class='date'>2018-11-09</text>
+              <text class='time'>10:52:54</text>
+            </view>
+          </view>
+        </view>
+        <view class='msg_ul'>
+          <view class='msg_li'>
+            <text class='txt'>货物已分配，等待配送</text>
+            <view class='box'>
+              <text class='date'>2018-11-09</text>
+              <text class='time'>10:52:54</text>
+            </view>
+          </view>
+          <view class='msg_li'>
+            <text class='txt'>货物已分配，等待配送</text>
+            <view class='box'>
+              <text class='date'>2018-11-09</text>
+              <text class='time'>10:52:54</text>
+            </view>
+          </view>
+          <view class='msg_li'>
+            <text class='txt'>货物已分配，等待配送</text>
+            <view class='box'>
+              <text class='date'>2018-11-09</text>
+              <text class='time'>10:52:54</text>
+            </view>
+          </view>
+        </view>
+        <!-- <view class='msg_ul'>
+          <view class='msg_li' style='border-bottom:{{border}};'>
+            <text class='txt'>货物已分配，等待配送</text>
+            <view class='box'>
+              <text class='date'>2018-11-09</text>
+              <text class='time'>10:52:54</text>
+            </view>
+          </view>
+        </view> -->
+      </view>
+    </view>
+  </view>
+  <!-- tabBar -->
+  <view class='tabBar' style='overflow:{{tabBar_overflow}}'>
+    <view class='wrap'>
+      <image class='tabBar_bg' src='../../images/tabBar_bg.png' style='top:{{tabBgTop}}'></image>
+      <view class='sub_wp tab' catchtap='subscription'>
+        <image class='Subscribe' src='{{subscribeImg}}' style='width:{{picWidth}};height:{{picHeight}};margin-left:{{subleft}}' ></image>
+        <text class='desc'>订阅</text>
+      </view>
+      <view class='rem_wp tab' catchtap='note' >
+        <image class='Remarks' src='../../images/Remarks.png' style='margin-top:{{remarkTop}}'></image>
+        <text class='desc'>备注</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='layer' style='display:{{layerDisplay}};' bindtap='subs_wait'></view>
+
+  <view class='main' style='display:{{mainLayer}}'>
+    <view class='main_text'>是否订阅此物流</view>
+    <view class='btn'>
+      <view class='wait' catchtap='subs_wait'>我想想</view>
+      <view class='sure' catchtap='subs_sure'>确定</view>
+    </view>
+  </view>
+
+  <!-- <view class='tips' style='display:{{tipsBlock}}'>{{tips}}</view> -->
+
+  <view class='notes' style='display:{{show}}' catchtap=''>
+    <form bindsubmit='note_sure'>
+      <view class='noteTitle'>
+        <text>编辑备注</text>
+        <input class='noteValue' name='notes' placeholder='请填写备注' value='{{noteValue}}' bindconfirm='note_sure' ></input>
+      </view>
+      <view class='note_btn'>
+        <button class='nbtn' id='note_wait' catchtap='note_wait'>再想想</button>
+        <view class='hr'><button class='nbtn' id='note_sure' form-type='submit'>确定</button></view>
+      </view>
+    </form>
+  </view>
+</view>

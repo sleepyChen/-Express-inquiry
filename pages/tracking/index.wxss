@@ -1,0 +1,318 @@
+/* pages/tracking/index.wxss */
+
+
+page {
+  height: 100%;
+  position: relative;
+  background-color: #eee;
+}
+
+.over_hid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.nav-wrap {
+  width: 100%;
+  height: 165rpx;
+  overflow: hidden;
+  position: fixed;
+  z-index: 100;
+}
+
+.nav_bg {
+  width: 100%;
+  height: 165rpx;
+  z-index: -1;
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+}
+
+.nav-title {
+  height: 160rpx;
+  line-height: 180rpx;
+  text-align: left;
+  font-family: 'weiruanyahei';
+  font-size: 34rpx;
+  color: #787878;
+  padding-left: 63rpx;
+  position: relative;
+}
+
+.back{
+  position: absolute;
+  top: 78rpx;
+  left: 18rpx; 
+  content: '';
+  width: 20rpx;
+  height: 20rpx;
+  cursor: pointer;
+  border-left:2rpx solid #7a7a7a;
+  border-bottom: 2rpx solid #7a7a7a;
+  transform: rotate(45deg);
+}
+
+.content {
+  width: 100%;
+  background: #eee;
+  padding: 209rpx 0 44rpx 0;
+  margin-bottom: 40rpx;
+}
+
+.con_wrap {
+  width: 100%;
+  background: #fff;
+}
+
+.label_belong {
+  width: 692rpx;
+  margin: 0 auto 24rpx;
+  padding: 26rpx 0;
+  font-size: 34rpx;
+  display: flex;
+  border-bottom: 2rpx dashed #989898;
+}
+
+.sign {
+  width: 34rpx;
+  height: 34rpx;
+  margin-top: 5rpx;
+}
+
+.belong {
+  margin-left: 30rpx;
+  margin-right: 28rpx;
+}
+
+.track_num {
+  color: #989898;
+}
+
+.msg {
+  width: 692rpx;
+  margin: 0 auto;
+  position: relative;
+}
+
+.thread {
+  position: absolute;
+  width: 2rpx;
+  top: 30rpx;
+  left: 18rpx;
+  background: #645e91;
+}
+
+.msg_ul {
+  margin: 0px 0 32rpx 0;
+}
+
+.msg_li {
+  display: flex;
+  padding-left: 50rpx;
+  flex-direction: column;
+  position: relative;
+}
+
+.msg_li::before {
+  content: '';
+  width: 8rpx;
+  height: 8rpx;
+  background: #645491;
+  border-radius: 8rpx;
+  position: absolute;
+  top: 30rpx;
+  left: 16rpx;
+}
+
+.terminate {
+  color: #000;
+  font-size: 34rpx;
+}
+
+.txt {
+  font-size: 28rpx;
+  color: #989898;
+}
+
+.box {
+  color: #989898;
+  font-size: 22rpx;
+  margin-top: 18rpx;
+  margin-bottom: 38rpx;
+}
+
+.date {
+  margin-right: 28rpx;
+}
+
+/* 底部选项 */
+
+.tabBar {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.wrap {
+  display: flex;
+  position: relative;
+}
+
+.tabBar_bg {
+  width: 100%;
+  height: 141rpx;
+  z-index: -1;
+  position: absolute;
+  top: -21rpx;
+  left: 0;
+}
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /*无效？*/
+  padding-left: 24%;
+  padding-top: 22rpx;
+  padding-right: 70rpx;
+  padding-bottom: 20rpx;
+}
+
+.desc {
+  font-size: 24rpx;
+  color: #fff;
+  margin-top: 8rpx;
+}
+
+.Remarks {
+  width: 43rpx;
+  height: 41rpx;
+  margin-left: 4rpx;
+}
+
+.layer {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0rpx;
+  /* display: none; */
+}
+
+.main {
+  width: 536rpx;
+  height: 207rpx;
+  background: #fff;
+  border-radius: 15rpx;
+  position: absolute;
+  top: 568rpx;
+  left: 100rpx;
+}
+
+.main_text {
+  height: 103rpx;
+  border-bottom: 1rpx solid #d4d4d4;
+  line-height: 103rpx;
+  text-align: center;
+}
+
+.btn {
+  display: flex;
+  height: 103rpx;
+  justify-content: center;
+}
+
+.sure, .wait {
+  height: 103rpx;
+  line-height: 103rpx;
+  text-align: center;
+  width: 267rpx;
+  cursor: pointer;
+}
+
+.sure {
+  color: #be1919;
+  border-left: 1rpx solid #d4d4d4;
+}
+
+.tips {
+  width: 220rpx;
+  height: 80rpx;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 20rpx;
+  position: absolute;
+  bottom: 300rpx;
+  left: 255rpx;
+  color: #fff;
+  line-height: 80rpx;
+  text-align: center;
+  letter-spacing: 4rpx;
+  font-size: 36rpx;
+}
+
+.notes {
+  position: absolute;
+  top: 535rpx;
+  left: 107rpx;
+  width: 536rpx;
+  height: 277rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  display: none;
+}
+
+.noteTitle {
+  padding: 27rpx 0;
+  border-bottom: 0.5rpx solid #c2c2c2;
+}
+
+.noteTitle text {
+  font-size: 30rpx;
+  color: #000;
+  display: block;
+  text-align: center;
+  margin-bottom: 27rpx;
+}
+
+.noteValue {
+  width: 440rpx;
+  height: 58rpx;
+  border: 0.5rpx solid #c2c2c2;
+  border-radius: 20rpx;
+  padding-left: 19rpx;
+  font-size: 26rpx;
+  margin-left: 38rpx;
+}
+
+button::after{
+  border: none;
+}
+button{
+  background-color: #fff;
+}
+
+.note_btn {
+  display: flex;
+}
+
+.nbtn {
+  width: 267.5rpx;
+  height: 94rpx;
+  line-height: 94rpx;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hr{
+  border-left: 0.5rpx solid #c2c2c2;
+}
+
+#note_wait {
+  color: #838282;
+}
+
+#note_sure {
+  color: #be1919;
+}
